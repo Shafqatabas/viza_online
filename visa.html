@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canada Visa - Sardar Jagmohan Singh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+   /* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+nav {
+  background-color: #0d47a1;  /* Dark blue background for the navbar */
+  padding: 15px 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative; /* To position the hover effect correctly */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  background-color: #ffeb3b;  /* Yellow background on hover */
+}
+
+nav ul li a.active {
+  color: #ffeb3b;  /* Keep yellow color for active link */
+  font-weight: bold;
+}
+
+/* Hero Image and Slider  */
+.slider img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hero-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 5px solid #0d47a1;
+}
+
+/* General Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Visa Section */
+.visa-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.visa-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: left;
+}
+
+.visa-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.visa-card h3 {
+  color: #0d47a1;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Canada Visa Section */
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.section-text {
+  flex: 1;
+  text-align: left;
+}
+
+.section-text h2 {
+  font-size: 32px;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.section-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.section-text ul {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.section-text ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.section-text a.btn {
+  display: inline-block;
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background 0.3s;
+  margin-top: 20px;
+}
+
+.section-text a.btn:hover {
+  background-color: #004d40;
+}
+
+.section img {
+  flex: 1;
+  max-width: 50%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: auto;
+}
+/* Button Styling */
+.btn {
+  display: inline-block;
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background 0.3s;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #004d40;
+}
+
+
+/* Responsive Design for Mobile and Tablets */
+@media screen and (max-width: 1024px) {
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  .visa-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Hero image adjustments for smaller screens */
+  .hero-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .slider img {
+    height: 400px;
+  }
+
+  .visa-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .hero-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .slider img {
+    height: 350px;
+  }
+
+  .visa-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .section-text h2 {
+    font-size: 28px;
+  }
+
+  .section-text p {
+    font-size: 16px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>Sardar Jagmohan Singh</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="./viza.html">Visa Status</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <img src="./R.jpeg" alt="Sardar Jagmohan Singh - Canada Work Visa Expert" class="hero-img" />
+    <h2>Canada Work Visa</h2>
+    <p>We help you apply for your dream job in Canada. Secure your work visa with expert guidance and fast processing.</p>
+    <a href="https://wa.me/971501234567" class="btn">Check Visa on WhatsApp</a>
+
+    <div class="visa-section">
+      <div class="visa-card">
+        <img src="./th.jpeg" alt="Toronto City">
+        <h3>Live in Toronto</h3>
+        <p>Canada's largest city offers great job opportunities and lifestyle.</p>
+      </div>
+      <div class="visa-card">
+        <img src="./OIP.jpeg" alt="Canadian Flag">
+        <h3>Easy Visa Processing</h3>
+        <p>We make the process stress-free with full document support.</p>
+      </div>
+      <div class="visa-card">
+        <img src="./OIP (1).jpeg" alt="Canada Visa Jobs">
+        <h3>Job Placement</h3>
+        <p>Apply through us and get a guaranteed interview with Canadian employers.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-text">
+      <h2>How to Apply for Canada Visitor Visa</h2>
+      <p>The Canada Visitor Visa is for people who want to visit Canada for tourism, business, or family reasons. Here's how to apply:</p>
+      <ul>
+        <li>Step 1: Gather required documents (proof of financial support, passport, etc.)</li>
+        <li>Step 2: Complete the visitor visa application form online.</li>
+        <li>Step 3: Pay the visa fee and submit your application.</li>
+        <li>Step 4: Wait for approval and your visa.</li>
+      </ul>
+      <a href="https://wa.me/971501234567" class="btn">Apply Now</a>
+    </div>
+    <img src="./How-to-apply-for-Canada-Visa-1024x444.jpg" alt="Canada Visitor Visa Application" />
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Sardar Jagmohan Singh Visa Services. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#">&#x1F4F1;</a>
+      <a href="#">&#x1F4F7;</a>
+      <a href="#">&#x1F4F2;</a>
+    </div>
+  </footer>
+
+</body>
+</html>

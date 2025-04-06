@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Checker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: white;
+            font-size: 36px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            background: rgba(0, 123, 255, 0.15);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 90%;
+            max-width: 420px;
+            text-align: center;
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            outline: none;
+            background-color: rgba(255,255,255,0.9);
+            color: #333;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #00e676;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #00c853;
+        }
+
+        p#result {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 300px;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: 2px solid white;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #ffe;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Visa Checker</h1>
+
+    <div class="container">
+        <h2>Check Your Visa Status</h2>
+        <input type="text" id="idNumber" placeholder="Enter ID Card Number">
+        <button onclick="checkVisa()">Check Visa</button>
+        <p id="result"></p>
+        
+        <!-- Image Section -->
+        <div id="imageContainer" class="image-container">
+            <h3>Visa Details</h3>
+            <img id="visaImage" src="" alt="Visa Image">
+            <h3>ID Card</h3>
+            <img id="idCardImage" src="" alt="ID Card Image">
+            <h3>Passport</h3>
+            <img id="passportImage" src="" alt="Passport Image">
+        </div>
+    </div>
+
+    <script>
+        function checkVisa() {
+            const idNumber = document.getElementById('idNumber').value;
+            const result = document.getElementById('result');
+            const imageContainer = document.getElementById('imageContainer');
+            const visaImage = document.getElementById('visaImage');
+            const idCardImage = document.getElementById('idCardImage');
+            const passportImage = document.getElementById('passportImage');
+            
+            const visaDatabase = {
+                "PA3728010": { 
+                    status: "Visa Approved ✅", 
+                    visa: "images/image.jpg", 
+                    idCard: "images/id_card.jpg", 
+                    passport: "images/passbord.jpg" 
+                },
+                "0987654321": { status: "Visa Pending ⏳" },
+                "1122334455": { status: "Visa Rejected ❌" }
+            };
+
+            if (visaDatabase[idNumber]) {
+                result.innerText = `Status: ${visaDatabase[idNumber].status}`;
+                
+                if (idNumber === "PA3728010") {
+                    visaImage.src = visaDatabase[idNumber].visa;
+                    idCardImage.src = visaDatabase[idNumber].idCard;
+                    passportImage.src = visaDatabase[idNumber].passport;
+                    imageContainer.style.display = "block";
+                } else {
+                    imageContainer.style.display = "none";
+                }
+
+                result.style.color = (idNumber === "PA3728010") ? "lightgreen" : "orange";
+            } else {
+                result.innerText = "No Record Found ❌";
+                result.style.color = "red";
+                imageContainer.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
